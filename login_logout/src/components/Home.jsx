@@ -1,12 +1,15 @@
 import React from 'react'
-import './Home.css'
+import { Box, Typography, Button, Container, TextField } from "@mui/material";
+
 
 const Home = (props) => {
   return (
-    <div className='home-container screen-container '>
-        <h1>Home Page</h1>
-        <button onClick={props.goToSignup}>Sign Up</button>
-    </div>
+  <Container maxWidth='sm'>
+   <Box>
+        <Typography variant='h2'>Home Page</Typography>
+        <Button onClick={props.goToSignup}>Sign Up</Button>
+    </Box>
+  </Container>
   )
 }
 

@@ -8,7 +8,7 @@ import Dashboard from "./components/dashboard";
 
 function App() {
   const [screen, setScreen] = useState("home");
-  const [users, setUsers] = useState([]); // [] empty array
+  const [users, setUsers] = useState([]); 
   const [currentUser, setCurrentUser] = useState(null);
 
 

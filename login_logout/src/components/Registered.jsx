@@ -1,5 +1,4 @@
 import React from 'react'
-import './registered.css'
 
 const Registered = (props) => {
   return (
