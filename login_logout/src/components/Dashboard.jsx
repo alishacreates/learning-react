@@ -1,12 +1,15 @@
 import React from 'react'
+import { Box, Typography, Button, Container, TextField } from "@mui/material";
 
 const Dashboard = (props) => {
   return (
-    <div className='db-container screen-container'>
-        <h1>DASHBOARD</h1>
-        <h2>Welcome, {props.currentUser}</h2>
-        <button onClick={props.logout}>Logout</button>
-    </div>
+    <Container>
+      <Box className='db-container screen-container'>
+          <Typography variant='h2'>DASHBOARD</Typography>
+          <Typography variant='h4'>Welcome, {props.currentUser}</Typography>
+          <Button onClick={props.logout}>Logout</Button>
+      </Box>
+    </Container>
   )
 }
 
