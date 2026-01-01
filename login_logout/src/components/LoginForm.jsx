@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from "react";
-import { Container, TextField, Typography, Button, Box } from "@mui/material";
+import { Container, TextField, Typography, Button, Box, containerClasses } from "@mui/material";
+
 const LoginForm = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,16 +20,17 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div className='login-container screen-container'>
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={props.goToSignup}>
-        Don't have an account? Sign Up
-      </button>
-
-    </div>
+    <Container>
+      <Box className='login-container screen-container'>
+        <Typography variant='h2'>Login</Typography>
+        <TextField type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+        <TextField type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <Button onClick={handleLogin}>Login</Button>
+        <Button onClick={props.goToSignup}>
+          Don't have an account? Sign Up
+        </Button>
+      </Box>
+    </Container>
   );
 };
 
