@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { Container, TextField, Typography, Button, Box, containerClasses } from "@mui/material";
+import { Stack, Container, TextField, Typography, Button, Box, containerClasses } from "@mui/material";
 
 const LoginForm = (props) => {
   const [username, setUsername] = useState("");
@@ -20,17 +20,20 @@ const LoginForm = (props) => {
   };
 
   return (
-    <Container>
-      <Box className='login-container screen-container'>
-        <Typography variant='h2'>Login</Typography>
-        <TextField type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
-        <TextField type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <Button onClick={handleLogin}>Login</Button>
-        <Button onClick={props.goToSignup}>
-          Don't have an account? Sign Up
-        </Button>
-      </Box>
-    </Container>
+      <Container>
+        <Box sx={{mx: 4, my: 10, textAlign: "center", boxShadow: 2}}>
+          <Typography sx={{fontWeight: "bold", color: "#eaf0b8ff"}} variant='h2'>Login</Typography>
+          <br />
+          <TextField sx={{backgroundColor: "#ffff"}} type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <br/> <br />
+          <TextField sx={{backgroundColor: "#fcfcfc"}} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <br/> <br />
+          <Button sx={{color: "#1b29a3ff", boxShadow: 3, backgroundColor: "white", fontWeight: "bold", borderRadius: "30px"}} variant='contained' onClick={handleLogin}>Login</Button>
+          <br/> <br/>
+          <Button sx={{fontFamily: "system-ui"}} onClick={props.goToSignup}>
+            Don't have an account? Sign Up</Button>
+        </Box>
+      </Container>
   );
 };
 

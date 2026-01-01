@@ -5,6 +5,7 @@ import SignupForm from "./components/signupform";
 import Registered from "./components/Registered";
 import LoginForm from "./components/LoginForm";
 import Dashboard from "./components/dashboard";
+import { Box, Typography, Button, Container, TextField } from "@mui/material";
 
 function App() {
   const [screen, setScreen] = useState("home");
@@ -17,9 +18,9 @@ function App() {
   };
 
   return (
-    <>
+    <Box sx={{minHeight: '100vh', backgroundColor: '#003333', display: "flex", justifyContent: "center", alignItems: "center"}}>
       {screen === "home" && ( 
-        <Home goToSignup={() => setScreen("signup")} /> )}
+        <Home goToSignup={() => setScreen("signup")} goToLogin={()=> setScreen("login")}/> )}
       {screen === "signup" && ( 
         <SignupForm saveUser={saveUser} goToLoginbutton ={() => setScreen("registered")} /> )}
       {screen === "registered" && 
@@ -29,7 +30,7 @@ function App() {
               goToDashboard={() => setScreen("dashboard")} goToSignup={() => setScreen("signup")} /> )}
       {screen === "dashboard" && 
         <Dashboard currentUser={currentUser} logout={() => setScreen("login")} />} 
-    </>
+    </Box>
   );
 }
 

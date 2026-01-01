@@ -14,13 +14,15 @@ const SignupForm = (props) => {
 
   return (
     <Container>
-      <Box className="signup-container screen-container">
-        <Typography variant="h2">Signup Form</Typography>
-        <TextField type="text" placeholder="Enter your username:" value={username}
-          onChange={(e) => setUsername(e.target.value)}/> <br/>
-        <TextField type="password" placeholder="Enter your password:" value={password} onChange={(e) => setPassword(e.target.value)}/>
-        <br/>
-        <Button onClick={handleSubmit}> Submit </Button>
+      <Box sx={{mx: 4, my: 5, p: 5, textAlign: "center"}}>
+        <Typography sx={{ fontWeight: 'bold', color: "#eaf0b8ff" }} variant="h2">Signup Form</Typography>
+        <br />
+        <TextField sx={{backgroundColor: "white" ,color: "#ffff", borderRadius: "30"}} type="text" placeholder="Enter your username:" value={username}
+          onChange={(e) => setUsername(e.target.value)}/> 
+        <br/> <br />
+        <TextField sx={{backgroundColor: "#f5f5f5ff"}} type="password" placeholder="Enter your password:" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <br/> <br />
+        <Button sx={{color: "#1b29a3ff", boxShadow: 5, backgroundColor: "white", fontWeight: "bold", borderRadius: "30px"}}  variant="contained" onClick={handleSubmit}> Submit </Button>
       </Box>
     </Container>
   );
