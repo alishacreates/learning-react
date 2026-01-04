@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import SignupForm from "./components/SignupForm";
 import Registered from "./components/Registered";
 import LoginForm from "./components/LoginForm";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboard";
 import { Box, Typography, Button, Container, TextField } from "@mui/material";
 
 function App() {
