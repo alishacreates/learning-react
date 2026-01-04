@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Container, TextField, Typography, Button, Box } from "@mui/material";
 
-const SignupForm = (props) => {
+const SignupForm = ({goToRegistered}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  setPassword((prev) => prev.trim());
+
   const handleSubmit = async () => {
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch("http://localhost:8080/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -15,9 +17,9 @@ const SignupForm = (props) => {
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (data.message === "User registered successfully") {
         console.log(data); // {"message":"User registered successfully"}
-        props.goToLoginbutton(); // move to "Registered" screen
+        goToRegistered(); // move to "Registered" screen
       } else {
         alert(data.message || "Something went wrong");
       }
