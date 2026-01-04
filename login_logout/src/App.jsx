@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './App.css'
 import Home from "./components/Home";
-import SignupForm from "./components/signupform";
+import SignupForm from "./components/SignupForm";
 import Registered from "./components/Registered";
 import LoginForm from "./components/LoginForm";
-import Dashboard from "./components/dashboard";
+import Dashboard from "./components/Dashboard";
 import { Box, Typography, Button, Container, TextField } from "@mui/material";
 
 function App() {
