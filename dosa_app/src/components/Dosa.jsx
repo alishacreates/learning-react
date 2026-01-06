@@ -18,7 +18,7 @@ const  Dosa = ({number, name, price}) => {
     }
   }
 
-  let TotalPrice =() => {
+  let TotalPrice = () => {
     setTotal(total => total + ({price} * {quantity}))
   }
   
@@ -30,7 +30,7 @@ const  Dosa = ({number, name, price}) => {
             <h4 className='quantity'>Quantity {quantity}</h4>
             <h5><button onClick={increaseQuantity}>+</button>  Increase </h5>
             <h5><button onClick={decreaseQuantity}>-</button>  Decrease </h5>
-            <h4 className='quantity'>Total {total}</h4>
+            <h4 className='quantity'>Total Price: {total}</h4>
     </div>
   )
 }

@@ -1,0 +1,7 @@
+learned and typed code myself:
+
+7th january: 
+    1. useState
+    2. Component
+    3. Props
+    4. Event: onClick
