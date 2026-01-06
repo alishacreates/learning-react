@@ -28,8 +28,8 @@ const  Dosa = ({number, name, price}) => {
             <p>Dosa name: {name}</p>
             <p>Dosa price: ${price}</p>
             <h4 className='quantity'>Quantity {quantity}</h4>
-            <h5><button onClick={increaseQuantity}>+</button>  Increase </h5>
-            <h5><button onClick={decreaseQuantity}>-</button>  Decrease </h5>
+            <h5><button className='btn' onClick={increaseQuantity}>+</button>  Increase </h5>
+            <h5><button className='btn' onClick={decreaseQuantity}>-</button>  Decrease </h5>
             <h4 className='quantity'>Total Price: {total}</h4>
     </div>
   )

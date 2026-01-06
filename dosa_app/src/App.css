@@ -1,8 +1,8 @@
 *{
-  background-color: bisque;
+  background-color: rgb(37, 24, 9);
 }
 .main-container{
-  color: black;
+  color: rgb(249, 248, 248);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .heading{
-  color: rgb(6, 63, 44);
+  color: rgb(166, 196, 186);
   display: flex;
   justify-content: center;
 }
