@@ -1,13 +1,14 @@
-import React from "react"
-import Info from "./components/Info";
+const user = {
+  name: 'hedy lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
 
-function Main(){
+export default function Profile(){
   return (
-    <div>
-      <h1>Companies Data</h1>
-      <Info/>
-    </div>
-  );
+    <>
+    <h1>{user.name}</h1>
+    <img src={user.imageUrl} alt= {' Photo of ' + user.name} />
+    </>
+  )
 }
-
-export default Main
