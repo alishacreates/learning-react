@@ -7,19 +7,21 @@ const  Dosa = ({number, name, price}) => {
   const [total, setTotal] = useState(0);
   
   let increaseQuantity = () => {
-    setQuantity(quantity => quantity+1)
+    if(quantity<11){
+      setQuantity(quantity => quantity+1)
+      setTotal(total => total + ({price}*{quantity}))
+    } else {
+      alert("can only order 10 dosas at one time.")
+    }
   }
 
    let decreaseQuantity = () => {
     if(quantity>1){
      setQuantity(quantity => quantity-1)
+     setTotal(total => total + ({price} * {quantity}))
     } else{
         alert("quantity can't be less than 1")
     }
-  }
-
-  let TotalPrice = () => {
-    setTotal(total => total + ({price} * {quantity}))
   }
   
   return (
