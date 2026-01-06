@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './Pizza.css'
+import './Dosa.css'
 
-const Pizza = ({number, name, price}) => {
+const  Dosa = ({number, name, price}) => {
 
   const [quantity, setQuantity] = useState(1);
   const [total, setTotal] = useState(0);
@@ -18,21 +18,21 @@ const Pizza = ({number, name, price}) => {
     }
   }
 
-  let TotalPrice =(total) => {
-    setTotal({price} * {quantity})
+  let TotalPrice =() => {
+    setTotal(total => total + ({price} * {quantity}))
   }
   
   return (
     <div className='container'>
-            <h2> Pizza {number} </h2>
-            <p>Pizza name: {name}</p>
-            <p>Pizza price: ${price}</p>
+            <h2> Dosa {number} </h2>
+            <p>Dosa name: {name}</p>
+            <p>Dosa price: ${price}</p>
             <h4 className='quantity'>Quantity {quantity}</h4>
             <h5><button onClick={increaseQuantity}>+</button>  Increase </h5>
             <h5><button onClick={decreaseQuantity}>-</button>  Decrease </h5>
-            <h4 className='quantity'>Total {}</h4>
+            <h4 className='quantity'>Total {total}</h4>
     </div>
   )
 }
 
-export default Pizza
+export default Dosa
