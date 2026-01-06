@@ -1,8 +1,16 @@
 
-Create a Pizza component
-Takes name and price as props
-Renders a <div> showing name and price
-Update App.jsx
-Render at least 3 different Pizza components with different names/prices
-Add simple styling
-Either inline styles or a CSS file to make it look slightly nice
+In Pizza.jsx
+Add a quantity state
+Default value = 1
+2️⃣ Add two buttons:
+➕ Increase
+➖ Decrease
+3️⃣ Button behavior:
+➕ increases quantity
+➖ decreases quantity
+Quantity should never go below 1
+4️⃣ Display:
+Show current quantity
+Show total price
+total = price * quantity
+
