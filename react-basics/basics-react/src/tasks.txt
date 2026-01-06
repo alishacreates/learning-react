@@ -1,0 +1,8 @@
+
+Create a Pizza component
+Takes name and price as props
+Renders a <div> showing name and price
+Update App.jsx
+Render at least 3 different Pizza components with different names/prices
+Add simple styling
+Either inline styles or a CSS file to make it look slightly nice
