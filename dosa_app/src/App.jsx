@@ -13,7 +13,7 @@ const App = () => {
       <Dosa number = {3} name= "Cheese Dosa" price={250}/>
       <Dosa number = {4} name= "Rava Dosa" price={230}/>
     </div>
-  </>
+  </> 
   )
 }
 
