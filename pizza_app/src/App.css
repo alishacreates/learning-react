@@ -1,0 +1,16 @@
+*{
+  background-color: bisque;
+}
+.main-container{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  gap: 200px;
+  border: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+
+}

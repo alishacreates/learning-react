@@ -4,6 +4,7 @@ import './Pizza.css'
 const Pizza = ({number, name, price}) => {
 
   const [quantity, setQuantity] = useState(1);
+  const [total, setTotal] = useState(0);
   
   let increaseQuantity = () => {
     setQuantity(quantity => quantity+1)
@@ -16,6 +17,10 @@ const Pizza = ({number, name, price}) => {
         alert("quantity can't be less than 1")
     }
   }
+
+  let TotalPrice =(total) => {
+    setTotal({price} * {quantity})
+  }
   
   return (
     <div className='container'>
@@ -25,6 +30,7 @@ const Pizza = ({number, name, price}) => {
             <h4 className='quantity'>Quantity {quantity}</h4>
             <h5><button onClick={increaseQuantity}>+</button>  Increase </h5>
             <h5><button onClick={decreaseQuantity}>-</button>  Decrease </h5>
+            <h4 className='quantity'>Total {}</h4>
     </div>
   )
 }
