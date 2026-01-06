@@ -1,14 +1,15 @@
-const user = {
-  name: 'hedy lamarr',
-  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-  imageSize: 90,
-};
+//Set up a React project using Vite or CRA.
+// Create a Pizza component that receives a name and price as props.
+// In App.jsx, render 2–3 Pizza components with different names and prices.
+// Add some static text and styling (inline or CSS file).
+// Goal: You should see a list of pizzas with their name and price in the browser.
 
-export default function Profile(){
+import React from 'react'
+
+const App = () => {
   return (
-    <>
-    <h1>{user.name}</h1>
-    <img src={user.imageUrl} alt= {' Photo of ' + user.name} />
-    </>
+    <div>App</div>
   )
 }
+
+export default App
