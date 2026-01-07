@@ -4,12 +4,10 @@ import './Dosa.css'
 const  Dosa = ({number, name, price}) => {
 
   const [quantity, setQuantity] = useState(1);
-  const [total, setTotal] = useState(0);
   
   let increaseQuantity = () => {
-    if(quantity<11){
+    if(quantity<10){
       setQuantity(quantity => quantity+1)
-      setTotal(total => total + ({price}*{quantity}))
     } else {
       alert("can only order 10 dosas at one time.")
     }
@@ -18,7 +16,6 @@ const  Dosa = ({number, name, price}) => {
    let decreaseQuantity = () => {
     if(quantity>1){
      setQuantity(quantity => quantity-1)
-     setTotal(total => total + ({price} * {quantity}))
     } else{
         alert("quantity can't be less than 1")
     }
@@ -32,7 +29,7 @@ const  Dosa = ({number, name, price}) => {
             <h4 className='quantity'>Quantity {quantity}</h4>
             <h5><button className='btn' onClick={increaseQuantity}>+</button>  Increase </h5>
             <h5><button className='btn' onClick={decreaseQuantity}>-</button>  Decrease </h5>
-            <h4 className='quantity'>Total Price: {total}</h4>
+            <h4 className='quantity'>Total Price: {price * quantity}</h4>
     </div>
   )
 }
