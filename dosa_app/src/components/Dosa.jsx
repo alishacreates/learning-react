@@ -1,37 +1,56 @@
-import React, { useState } from 'react'
-import './Dosa.css'
+import React, { useState } from "react";
+import { Box, Button, Typography } from "@mui/material";
 
-const  Dosa = ({number, name, price}) => {
-
+const Dosa = ({ number, name, price }) => {
   const [quantity, setQuantity] = useState(1);
-  
-  let increaseQuantity = () => {
-    if(quantity<10){
-      setQuantity(quantity => quantity+1)
-    } else {
-      alert("can only order 10 dosas at one time.")
+  const increaseQuantity = () => {
+    if (quantity < 10) {
+      setQuantity(prev => prev + 1);
     }
-  }
-
-   let decreaseQuantity = () => {
-    if(quantity>1){
-     setQuantity(quantity => quantity-1)
-    } else{
-        alert("quantity can't be less than 1")
+  };
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(prev => prev - 1);
     }
-  }
-  
+  };
   return (
-    <div className='container'>
-            <h2> Dosa {number} </h2>
-            <p>Dosa name: {name}</p>
-            <p>Dosa price: ${price}</p>
-            <h4 className='quantity'>Quantity {quantity}</h4>
-            <h5><button className='btn' onClick={increaseQuantity}>+</button>  Increase </h5>
-            <h5><button className='btn' onClick={decreaseQuantity}>-</button>  Decrease </h5>
-            <h4 className='quantity'>Total Price: {price * quantity}</h4>
-    </div>
-  )
-}
+    <Box
+      sx={{
+        border: "2px solid rgb(245, 215, 215)",
+        width: 240, padding: 2, display: "flex", flexDirection: "column", gap: 1.5, alignItems: "center",}} >
+      <Typography variant="h6">Dosa {number}</Typography>
+      <Typography>Dosa name: {name}</Typography>
+      <Typography>Dosa price: ₹{price}</Typography>
+      <Typography
+        sx={{
+          fontFamily: "'Courier New', Courier, monospace", fontStyle: "oblique", fontSize: "larger", }}> 
+      Quantity: {quantity}
+      </Typography>
 
-export default Dosa
+      <Box sx={{ display: "flex", gap: 1 }}>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: "antiquewhite", color: "black" }} onClick={increaseQuantity}
+          disabled={quantity === 10} > +
+        </Button>
+
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: "antiquewhite", color: "black" }}
+          onClick={decreaseQuantity}
+          disabled={quantity === 1} > -
+        </Button>
+      </Box>
+
+      <Typography
+        sx={{
+          fontFamily: "'Courier New', Courier, monospace",
+          fontStyle: "oblique",
+        }}>
+        Total Price: ₹{price * quantity}
+      </Typography>
+    </Box>
+  );
+};
+
+export default Dosa;
