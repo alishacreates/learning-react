@@ -1,13 +1,14 @@
 import React from 'react'
-import { Box, Button, Typography, TextField } from "@mui/material";
+import {Container, Box, Button, Typography, TextField } from "@mui/material";
 
 const Nav = () => {
   return (
     <Container>
-        <Box>
+        <Box sx={{border: "5px solid black", width: "500px", height: "60px", margin: "10px auto", 
+            display: "flex", justifyContent: "space-around", alignItems: "center"}}>
             <Typography>Dosa</Typography>
             <Typography>Home</Typography>
-            <Button>About</Button>
+            <Typography>About</Typography>
         </Box>
     </Container>
   )
