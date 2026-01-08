@@ -38,7 +38,7 @@ const Dosa = ({ number, name, price }) => {
           variant="contained"
           sx={{ backgroundColor: "antiquewhite", color: "black" }}
           onClick={decreaseQuantity}
-          disabled={quantity === 1} > -
+          disabled={quantity === 0 } > -
         </Button>
       </Box>
 
