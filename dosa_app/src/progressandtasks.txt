@@ -5,3 +5,43 @@ learned and typed code myself:
     2. Component
     3. Props
     4. Event: onClick
+
+step 1:
+Set up a React project (Vite recommended, port 5173).
+Command: npm create vite@latest pizza-app → React → JavaScript
+cd pizza-app → npm install → npm run dev
+Create a Pizza component
+Takes name and price as props
+Renders a <div> showing name and price
+Update App.jsx
+Render at least 3 different Pizza components with different names/prices
+Add simple styling
+Either inline styles or a CSS file to make it look slightly nice
+
+step2: 
+You must implement ALL of this yourself:
+1️⃣ In Pizza.jsx
+Add a quantity state
+Default value = 1
+2️⃣ Add two buttons:
+➕ Increase
+➖ Decrease
+3️⃣ Button behavior:
+➕ increases quantity
+➖ decreases quantity
+Quantity should never go below 1
+4️⃣ Display:
+Show current quantity
+Show total price
+total = price * quantity
+
+step 3:
+You must implement ALL of this yourself:
+1️⃣ Disable buttons (NO alerts anymore)
+Disable ➕ when quantity === 10
+Disable ➖ when quantity === 1
+2️⃣ Show messages conditionally
+If quantity === 10 → show:
+“Maximum limit reached”
+If quantity === 1 → show:
+“Minimum quantity is 1”
