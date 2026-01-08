@@ -1,12 +1,14 @@
 import React from 'react'
 import Dosa from './components/Dosa'
 import './App.css';
+import Nav from './components/Nav';
 
 const App = () => {
   return (
   <>
   <h1 className='heading'>Dosa Buying Website </h1>
     <div className='main-container'>
+      <Nav />
       <Dosa number = {1} name= "Paneer Dosa" price={200}/>
       <Dosa number = {2} name= "Masala Dosa" price={300}/>
       <Dosa number = {3} name= "Cheese Dosa" price={250}/>

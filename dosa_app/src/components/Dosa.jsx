@@ -13,9 +13,25 @@ const Dosa = ({ number, name, price }) => {
       setQuantity(prev => prev - 1);
     }
   };
+
+  const buttonStyle = {
+  backgroundColor: "antiquewhite",
+  color: "black",
+  minWidth: 40,
+  "&:hover": {
+    backgroundColor: "antiquewhite",
+  },
+  "&:active": {
+    backgroundColor: "antiquewhite",
+  },
+  "&.Mui-focusVisible": {
+    backgroundColor: "antiquewhite",
+  },
+};
+
   return (
     <Box
-      sx={{
+      sx={{ 
         border: "2px solid rgb(245, 215, 215)",
         width: 240, padding: 2, display: "flex", flexDirection: "column", gap: 1.5, alignItems: "center",}} >
       <Typography variant="h6">Dosa {number}</Typography>
@@ -30,15 +46,15 @@ const Dosa = ({ number, name, price }) => {
       <Box sx={{ display: "flex", gap: 1 }}>
         <Button
           variant="contained"
-          sx={{ backgroundColor: "antiquewhite", color: "black" }} onClick={increaseQuantity}
+          sx={buttonStyle} onClick={increaseQuantity}
           disabled={quantity === 10} > +
         </Button>
 
         <Button
           variant="contained"
-          sx={{ backgroundColor: "antiquewhite", color: "black" }}
+          sx={buttonStyle}
           onClick={decreaseQuantity}
-          disabled={quantity === 0 } > -
+          disabled={quantity === 1} > -
         </Button>
       </Box>
 
