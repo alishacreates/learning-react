@@ -2,7 +2,6 @@ import React from 'react'
 import Dosa from './components/Dosa'
 import './App.css';
 import Nav from './components/Nav';
-import Summary from './components/Summary';
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
       <Dosa number = {2} name= "Masala Dosa" price={300}/>
       <Dosa number = {3} name= "Cheese Dosa" price={250}/>
       <Dosa number = {4} name= "Rava Dosa" price={230}/>
-      <Summary dosas={dosaList} />
     </div>
   </> 
   )
