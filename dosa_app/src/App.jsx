@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Dosa from './components/Dosa';
 import './App.css';
 import Nav from './components/Nav';
+import MenuPage from './components/MenuPage';
+
 
 const App = () => {
   const [page, setPage] = useState("Home");
@@ -22,7 +24,7 @@ const App = () => {
         </>
       )}
 
-      {page === "Menu" && <h2 style={{ textAlign: "center" }}>Our Menu</h2>}
+      {page === "Menu" && <MenuPage />}
 
       {page === "About" && <h2 style={{ textAlign: "center" }}>About Us</h2>}
     </>
