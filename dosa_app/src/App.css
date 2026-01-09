@@ -1,8 +1,8 @@
 *{
-  background-color: rgb(37, 24, 9);
+  background-color: rgb(51, 28, 18);
 }
 .main-container{
-  color: rgb(249, 248, 248);
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,4 +18,5 @@
   color: rgb(166, 196, 186);
   display: flex;
   justify-content: center;
+  text-shadow: 40px solid black;
 }

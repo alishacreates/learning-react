@@ -27,20 +27,13 @@ import { Box, Button, Typography } from "@mui/material";
           <Typography>Dosa price: ₹{price}</Typography>
         
 
-          <Typography
-            sx={{
-              fontFamily: "'Courier New', Courier, monospace",
-              fontStyle: "oblique",
-              fontSize: "larger",
-            }}
-          >
-            Quantity: {quantity}
-          </Typography>
+          <Typography sx={{ fontFamily: "'Courier New', Courier, monospace", fontStyle: "oblique", fontSize: "larger",
+            }}> Quantity: {quantity} </Typography>
 
           <Box sx={{ display: "flex", gap:2 }}>
+
             <Button
-            variant="contained" disableRipple disableElevation
-              sx={{backgroundColor: "white", color: "black",
+            variant="contained" disableRipple disableElevation sx={{backgroundColor: "white", color: "black",
                 "&:hover": {
                             backgroundColor: "wheat",
                           },
@@ -50,13 +43,12 @@ import { Box, Button, Typography } from "@mui/material";
                            }}
              onClick={increaseQuantity} > + </Button>
 
-          <Button
-          variant="contained" disableElevation disableRipple
-              sx={{backgroundColor: "wheat", color: "black"}}
-              onClick={decreaseQuantity}
-            >
-              -
-            </Button>
+           <Button
+           variant="contained" disableElevation disableRipple sx={{backgroundColor: "wheat", color: "black", 
+                "&:hover": {
+                            backgroundColor: "white",
+                          },}}
+              onClick={decreaseQuantity}> -  </Button>
           </Box>
 
           <Typography
