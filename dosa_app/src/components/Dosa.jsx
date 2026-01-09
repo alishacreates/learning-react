@@ -52,7 +52,7 @@ import { Box, Button, Typography } from "@mui/material";
 
           <Button
           variant="contained" disableElevation disableRipple
-              sx={{backgroundColor: "wheat"}}
+              sx={{backgroundColor: "wheat", color: "black"}}
               onClick={decreaseQuantity}
             >
               -
