@@ -16,7 +16,7 @@ const App = () => {
       />
       <Pizza
         name="The Big Meat Pizza"
-        description="Bacon, Pepperoni, Italian Sausage, Chorizo Sausage"
+        description="Pepperoni, Italian Sausage, Chorizo Sausage"
       />
     </div>
   );
