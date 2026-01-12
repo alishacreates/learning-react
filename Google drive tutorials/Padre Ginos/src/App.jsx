@@ -1,6 +1,6 @@
 import React from "react"; //default import yeh hai
 import {createRoot} from "react-dom"; //named import
-import Pizza from "./components/Pizza";
+import Pizza from "./Pizza";
 
 const App = () => {
   return (
@@ -26,3 +26,7 @@ const App = () => {
 };
 
 export default App
+
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(React.createElement(App));
