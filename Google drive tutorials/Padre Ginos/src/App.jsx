@@ -9,24 +9,20 @@ const App = () => {
       <Pizza
         name="Pepperoni"
         description="Mozzarella Cheese, Pepperoni"
-        image={"/public/pizzas/pepperoni.webp"}
       />
       <Pizza
         name="The Hawaiian Pizza"
         description="Sliced Ham, Pineapple, Mozzarella Cheese"
-        image={"/public/pizzas/hawaiian.webp"}
       />
       <Pizza
         name="The Big Meat Pizza"
         description="Bacon, Pepperoni, Italian Sausage, Chorizo Sausage"
-        image={"/public/pizzas/big_meat.webp"}
       />
     </div>
   );
 };
 
-export default App
+export default App;
 
-const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
-root.render(React.createElement(App));
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
