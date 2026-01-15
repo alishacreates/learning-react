@@ -1,7 +1,13 @@
 import React from "react";
 import { Container, Box, Button, Typography } from "@mui/material";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Nav = ({ onSelect }) => {
+const Nav = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <Container>
       <Box
@@ -17,18 +23,16 @@ const Nav = ({ onSelect }) => {
           borderRadius: "40px",
         }}
       >
+        {/* Menu Button */}
         <Button
           variant="contained"
           disableRipple
           disableElevation
-          onClick={() => onSelect("Menu")}
+          onClick={() => navigate("/menu")}
           sx={{
-            backgroundColor: "white",
+            backgroundColor: isActive("/menu") ? "wheat" : "white",
             color: "black",
             "&:hover": {
-              backgroundColor: "wheat",
-            },
-            "&:active": {
               backgroundColor: "wheat",
             },
           }}
@@ -36,16 +40,26 @@ const Nav = ({ onSelect }) => {
           Menu
         </Button>
 
+        {/* Home */}
         <Typography
-          sx={{ cursor: "pointer" }}
-          onClick={() => onSelect("Home")}
+          sx={{
+            cursor: "pointer",
+            fontWeight: isActive("/") ? "bold" : "normal",
+            color: isActive("/") ? "wheat" : "white",
+          }}
+          onClick={() => navigate("/")}
         >
           Home
         </Typography>
 
+        {/* About */}
         <Typography
-          sx={{ cursor: "pointer" }}
-          onClick={() => onSelect("About")}
+          sx={{
+            cursor: "pointer",
+            fontWeight: isActive("/about") ? "bold" : "normal",
+            color: isActive("/about") ? "wheat" : "white",
+          }}
+          onClick={() => navigate("/about")}
         >
           About
         </Typography>
@@ -55,3 +69,4 @@ const Nav = ({ onSelect }) => {
 };
 
 export default Nav;
+

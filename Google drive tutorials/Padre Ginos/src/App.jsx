@@ -1,23 +1,12 @@
 import React from "react"; //default import yeh hai
 import {createRoot} from "react-dom"; //named import
 import Pizza from "./Pizza";
+import Order from "./Order";
 
 const App = () => {
   return (
     <div>
-      <h1 className="logo">Padre Gino's Pizza</h1>
-      <Pizza
-        name="Pepperoni"
-        description="Mozzarella Cheese, Pepperoni"
-      />
-      <Pizza
-        name="The Hawaiian Pizza"
-        description="Sliced Ham, Pineapple, Mozzarella Cheese"
-      />
-      <Pizza
-        name="The Big Meat Pizza"
-        description="Pepperoni, Italian Sausage, Chorizo Sausage"
-      />
+      <Order/>
     </div>
   );
 };

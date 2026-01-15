@@ -1,32 +1,38 @@
-import React, { useState } from 'react';
-import Dosa from './components/Dosa';
-import './App.css';
-import Nav from './components/Nav';
-import MenuPage from './components/MenuPage';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Dosa from "./components/Dosa";
+import Nav from "./components/Nav";
+import MenuPage from "./components/MenuPage";
+import "./App.css";
 
-
-const App = () => {
-  const [page, setPage] = useState("Home");
-
+const Home = () => {
   return (
     <>
-      <Nav onSelect={setPage} />
+      <h1 className="heading">Dosa Buying Website</h1>
+      <div className="main-container">
+        <Dosa number={1} name="Paneer Dosa" price={200} />
+        <Dosa number={2} name="Masala Dosa" price={300} />
+        <Dosa number={3} name="Cheese Dosa" price={250} />
+        <Dosa number={4} name="Rava Dosa" price={230} />
+      </div>
+    </>
+  );
+};
 
-      {page === "Home" && (
-        <>
-          <h1 className="heading">Dosa Buying Website</h1>
-          <div className="main-container">
-            <Dosa number={1} name="Paneer Dosa" price={200} />
-            <Dosa number={2} name="Masala Dosa" price={300} />
-            <Dosa number={3} name="Cheese Dosa" price={250} />
-            <Dosa number={4} name="Rava Dosa" price={230} />
-          </div>
-        </>
-      )}
+const About = () => {
+  return <h2 style={{ textAlign: "center" }}>About Us</h2>;
+};
 
-      {page === "Menu" && <MenuPage />}
+const App = () => {
+  return (
+    <>
+      <Nav />
 
-      {page === "About" && <h2 style={{ textAlign: "center" }}>About Us</h2>}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 };
